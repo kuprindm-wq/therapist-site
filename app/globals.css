@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #F7F3EB;
+  --foreground: #292722;
+
+  --sage: #53614D;
+  --sage-light: #DCE0D4;
+
+  --sand: #E7DED0;
+  --line: #D4CABA;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+
+
+p {
+  letter-spacing: 0.01em;
+}
+
+
+
+::selection {
+  background: var(--sage-light);
+  color: var(--foreground);
+}
