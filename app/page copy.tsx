@@ -8,26 +8,39 @@ import Format from "@/components/Format";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+
 export default function Home() {
   return (
     <main className="bg-[#FDFBF7] text-[#2D2D2D]">
+
+
       <Header />
+
 
       <Hero />
 
+
       <Requests />
+
 
       <About />
 
+
       <Education />
+
 
       <Therapy />
 
+
       <Format />
+
 
       <Contact />
 
+
       <Footer />
+
+
     </main>
   );
 }
