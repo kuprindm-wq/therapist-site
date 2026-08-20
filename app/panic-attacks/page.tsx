@@ -19,9 +19,9 @@ export default function PanicAttacksPage() {
             Панические атаки: что делать и когда нужен психолог
           </h1>
 
-          {/* КОМПАКТНАЯ КАРТИНКА */}
+          {/* УМЕНЬШЕННАЯ КАРТИНКА */}
           <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-md">
+            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md">
               <Image
                 src="/images/panic-attacks-banner.jpg"
                 alt="Панические атаки"

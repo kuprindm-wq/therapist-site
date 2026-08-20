@@ -19,9 +19,8 @@ export default function CoupleTherapyPage() {
             Психолог для пары: терапия отношений
           </h1>
 
-          {/* КОМПАКТНАЯ КАРТИНКА */}
           <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-md">
+            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md">
               <Image
                 src="/images/couple-therapy-banner.jpg"
                 alt="Психолог для пары"

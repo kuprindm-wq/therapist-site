@@ -16,9 +16,8 @@ export default function PsychologistForRelationshipsPage() {
             Психолог по отношениям: помощь парам и семьям
           </h1>
 
-          {/* КОМПАКТНАЯ КАРТИНКА — центрированная, с ограничением ширины */}
           <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-md">
+            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md">
               <Image
                 src="/images/relationships-banner.jpg"
                 alt="Психолог по отношениям"
