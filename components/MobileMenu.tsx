@@ -28,14 +28,7 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            <Link
-              href="/#requests"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Направления
-            </Link>
-
+            {/* Блок Услуги */}
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
                 Услуги
@@ -71,6 +64,14 @@ export default function MobileMenu() {
                 className="mt-2 block transition hover:text-[#53614D]"
               >
                 Детско-родительские
+              </Link>
+
+              <Link
+                href="/#requests"
+                onClick={() => setOpen(false)}
+                className="mt-3 block text-sm text-[#7B705F] transition hover:text-[#53614D]"
+              >
+                Все направления →
               </Link>
             </div>
 
