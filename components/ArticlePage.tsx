@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type ArticlePageProps = {
   category: string;
@@ -65,8 +67,41 @@ export default function ArticlePage({
     .filter((article) => article.category === category)
     .slice(0, 3);
 
+  // === МИКРОРАЗМЕТКА ARTICLE (JSON-LD) ===
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": intro,
+    "author": {
+      "@type": "Person",
+      "name": "Мария Куприна",
+      "url": "https://mariakuprina.ru",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мария Куприна",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mariakuprina.ru/terap.jpg",
+      },
+    },
+    "datePublished": new Date().toISOString().split('T')[0],
+    "dateModified": new Date().toISOString().split('T')[0],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mariakuprina.ru",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-[#F7F3ED] text-[#2E2B27]">
+      {/* === JSON-LD МИКРОРАЗМЕТКА === */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="mx-auto max-w-4xl px-5 py-12 sm:px-6 md:py-20">
         {/* Навигация назад */}
         <div className="mb-10 flex items-center justify-between gap-4">
@@ -99,10 +134,13 @@ export default function ArticlePage({
             {intro}
           </p>
 
+          {/* === ОГЛАВЛЕНИЕ === */}
+          <TableOfContents />
+
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>
 
-        {/* КОНТЕНТ СТАТЬИ — с визуальными улучшениями */}
+        {/* КОНТЕНТ СТАТЬИ */}
         <div className="mt-12">
           <div className="max-w-2xl mx-auto">
             {children}
@@ -217,5 +255,44 @@ export default function ArticlePage({
         </div>
       </article>
     </main>
+  );
+}
+
+// === КОМПОНЕНТ ОГЛАВЛЕНИЯ ===
+function TableOfContents() {
+  const [headings, setHeadings] = useState<{ id: string; text: string }[]>([]);
+
+  useEffect(() => {
+    // Ищем все заголовки h2 в статье
+    const elements = document.querySelectorAll("article h2");
+    const items = Array.from(elements).map((el) => ({
+      id: el.id || el.textContent?.toLowerCase().replace(/\s/g, "-") || "",
+      text: el.textContent || "",
+    }));
+    setHeadings(items);
+  }, []);
+
+  if (headings.length === 0) return null;
+
+  return (
+    <div className="mt-8 rounded-2xl bg-[#F5F0EB] p-6 border-l-4 border-[#C49A7C]">
+      <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#6B7560]">
+        Содержание
+      </p>
+      <nav className="mt-3">
+        <ul className="space-y-2">
+          {headings.map((heading, index) => (
+            <li key={index}>
+              <a
+                href={`#${heading.id}`}
+                className="text-sm text-[#59544D] hover:text-[#53614D] transition-colors"
+              >
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
