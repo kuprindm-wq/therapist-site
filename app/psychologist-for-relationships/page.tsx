@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PsychologistForRelationshipsPage() {
   return (
@@ -20,6 +21,18 @@ export default function PsychologistForRelationshipsPage() {
             Я помогаю парам и семьям разобраться в конфликтах, восстановить
             доверие и найти новые способы быть вместе.
           </p>
+
+          {/* КАРТИНКА */}
+          <div className="mt-8 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/relationships-banner.jpg"
+              alt="Психолог по отношениям"
+              width={1200}
+              height={630}
+              className="w-full h-auto"
+            />
+          </div>
+
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>
 
@@ -96,7 +109,6 @@ export default function PsychologistForRelationshipsPage() {
           </div>
         </div>
 
-        {/* Коммерческий блок */}
         <section className="mt-16 border-t border-[#D8CEC1] pt-12">
           <div className="rounded-[32px] bg-[#53614D] px-7 py-10 text-white md:px-10">
             <h2 className="max-w-2xl text-3xl leading-tight md:text-4xl">

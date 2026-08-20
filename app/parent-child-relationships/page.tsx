@@ -24,7 +24,7 @@ export default function ParentChildRelationshipsPage() {
             друг друга и находить общий язык в любом возрасте.
           </p>
 
-          {/* === КАРТИНКА (замените src на ваш файл) === */}
+          {/* КАРТИНКА */}
           <div className="mt-8 rounded-2xl overflow-hidden">
             <Image
               src="/images/parent-child-relationships-banner.jpg"
@@ -110,7 +110,6 @@ export default function ParentChildRelationshipsPage() {
           </div>
         </div>
 
-        {/* Коммерческий блок */}
         <section className="mt-16 border-t border-[#D8CEC1] pt-12">
           <div className="rounded-[32px] bg-[#53614D] px-7 py-10 text-white md:px-10">
             <h2 className="max-w-2xl text-3xl leading-tight md:text-4xl">

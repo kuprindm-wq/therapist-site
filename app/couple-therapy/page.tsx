@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CoupleTherapyPage() {
   return (
@@ -21,6 +22,18 @@ export default function CoupleTherapyPage() {
             Помогаю парам восстановить контакт, доверие и близость.
             Вместе мы разбираемся в конфликтах, находим новые способы слышать друг друга и возвращаем тепло в отношения.
           </p>
+
+          {/* КАРТИНКА */}
+          <div className="mt-8 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/couple-therapy-banner.jpg"
+              alt="Психолог для пары"
+              width={1200}
+              height={630}
+              className="w-full h-auto"
+            />
+          </div>
+
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>
 
@@ -63,7 +76,7 @@ export default function CoupleTherapyPage() {
 
             <p>
               Я работаю с парой как с единой системой. Мы не ищем «виноватого»,
-              а смотрим на то, что происходит между вами. Как вы строите диалог?
+              а смотрим на то, что происходит между вами. Как вы строит диалог?
               Что стоит за вашими словами? Что каждый из вас чувствует на самом деле?
             </p>
 
@@ -123,7 +136,6 @@ export default function CoupleTherapyPage() {
           </div>
         </div>
 
-        {/* Коммерческий блок */}
         <section className="mt-16 border-t border-[#D8CEC1] pt-12">
           <div className="rounded-[32px] bg-[#53614D] px-7 py-10 text-white md:px-10">
             <h2 className="max-w-2xl text-3xl leading-tight md:text-4xl">
