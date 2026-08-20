@@ -33,7 +33,7 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            {/* НАПРАВЛЕНИЯ — теперь кнопка с JS-переходом */}
+            {/* НАПРАВЛЕНИЯ — принудительный переход через JS */}
             <button
               onClick={handleNavigateToRequests}
               className="text-left transition hover:text-[#53614D]"
