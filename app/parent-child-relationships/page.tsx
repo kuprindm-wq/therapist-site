@@ -24,14 +24,14 @@ export default function ParentChildRelationshipsPage() {
             друг друга и находить общий язык в любом возрасте.
           </p>
 
-          {/* КАРТИНКА — уменьшенная */}
-          <div className="mt-8 rounded-2xl overflow-hidden max-h-[320px]">
+          {/* КАРТИНКА */}
+          <div className="mt-8 rounded-2xl overflow-hidden">
             <Image
               src="/images/parent-child-relationships-banner.jpg"
               alt="Детско-родительские отношения"
               width={1200}
               height={630}
-              className="w-full h-auto object-cover object-center"
+              className="w-full h-auto"
             />
           </div>
 

@@ -23,14 +23,14 @@ export default function PanicAttacksPage() {
             которое можно понять и взять под контроль.
           </p>
 
-          {/* КАРТИНКА — уменьшенная */}
-          <div className="mt-8 rounded-2xl overflow-hidden max-h-[320px]">
+          {/* КАРТИНКА */}
+          <div className="mt-8 rounded-2xl overflow-hidden">
             <Image
               src="/images/panic-attacks-banner.jpg"
               alt="Панические атаки"
               width={1200}
               height={630}
-              className="w-full h-auto object-cover object-center"
+              className="w-full h-auto"
             />
           </div>
 

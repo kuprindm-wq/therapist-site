@@ -31,7 +31,7 @@ export default function Navigation() {
         </button>
 
         {isOpen && (
-          <div className="absolute left-0 top-full mt-2 min-w-[220px] rounded-xl bg-[#FDFBF7] border border-[#D8CEC1] py-2 shadow-lg">
+          <div className="absolute left-0 top-full pt-1 min-w-[220px] rounded-xl bg-[#FDFBF7] border border-[#D8CEC1] py-2 shadow-lg">
             <Link
               href="/psychologist-for-relationships"
               className="block px-4 py-2 text-sm hover:bg-[#F5F0EB] transition-colors"

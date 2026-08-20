@@ -22,14 +22,14 @@ export default function PsychologistForRelationshipsPage() {
             доверие и найти новые способы быть вместе.
           </p>
 
-          {/* КАРТИНКА — уменьшенная */}
-          <div className="mt-8 rounded-2xl overflow-hidden max-h-[320px]">
+          {/* КАРТИНКА — без обрезки */}
+          <div className="mt-8 rounded-2xl overflow-hidden">
             <Image
               src="/images/relationships-banner.jpg"
               alt="Психолог по отношениям"
               width={1200}
               height={630}
-              className="w-full h-auto object-cover object-center"
+              className="w-full h-auto"
             />
           </div>
 
@@ -38,7 +38,6 @@ export default function PsychologistForRelationshipsPage() {
 
         <div className="mt-12">
           <div className="max-w-2xl mx-auto space-y-6 text-[#55514B] leading-relaxed">
-
             <h2 className="text-2xl text-[#2E2B27] font-serif">
               Когда нужна помощь психолога по отношениям
             </h2>
@@ -105,7 +104,6 @@ export default function PsychologistForRelationshipsPage() {
               Я не даю готовых решений. Вместе мы исследуем вашу ситуацию,
               и вы находите то, что работает для вас.
             </p>
-
           </div>
         </div>
 
