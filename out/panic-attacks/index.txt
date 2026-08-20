@@ -1,0 +1,66 @@
+1:"$Sreact.fragment"
+2:I[39756,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+3:I[37457,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+4:I[79520,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],""]
+7:I[22016,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/1rxncug86bump.js"],""]
+f:I[68027,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default",1]
+:HL["/_next/static/chunks/26kxscvrt6mav.css","style"]
+:HL["/_next/static/media/01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/b0947914c9718a1e-s.p.1xjn85gt7t6qs.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+5:T400,
+            (function(m,e,t,r,i,k,a){
+              m[i]=m[i]||function(){
+                (m[i].a=m[i].a||[]).push(arguments)
+              };
+              m[i].l=1*new Date();
+
+              for (var j=0; j<document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                  return;
+                }
+              }
+
+              k=e.createElement(t);
+              a=e.getElementsByTagName(t)[0];
+              k.async=1;
+              k.src=r;
+              a.parentNode.insertBefore(k,a);
+            })(
+              window,
+              document,
+              'script',
+              'https://mc.yandex.ru/metrika/tag.js?id=111446719',
+              'ym'
+            );
+
+            ym(111446719, 'init', {
+              ssr: true,
+              clickmap: true,
+              ecommerce: "dataLayer",
+              referrer: document.referrer,
+              url: location.href,
+              accurateTrackBounce: true,
+              trackLinks: true
+            });
+          6:["$","div",null,{"children":["$","img",null,{"src":"https://mc.yandex.ru/watch/111446719","style":{"position":"absolute","left":"-9999px"},"alt":""}]}]
+0:{"P":null,"c":["","panic-attacks",""],"q":"","i":false,"f":[[["",{"children":["panic-attacks",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26kxscvrt6mav.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/1el5-48au3iai.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/14mrh2-p_w84d.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"className":"cormorant_garamond_f52f81c0-module__DfrdpW__variable manrope_88eaf149-module__nAwl2W__variable antialiased","children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{"id":"yandex-metrika","strategy":"afterInteractive","children":"$5"}],["$","noscript",null,{"children":"$6"}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-[#F7F3ED] text-[#2E2B27]","children":["$","div",null,{"className":"mx-auto max-w-4xl px-5 py-12 sm:px-6 md:py-20","children":[["$","div",null,{"className":"mb-10","children":["$","$L7",null,{"href":"/","className":"text-sm text-[#7B705F] transition-colors hover:text-[#53614D]","children":"← На главную"}]}],["$","header",null,{"className":"max-w-3xl","children":[["$","h1",null,{"className":"text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl","children":"Панические атаки: что делать и когда нужен психолог"}],["$","p",null,{"className":"mt-7 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9","children":"Панические атаки — это не просто страх. Это состояние, которое можно понять и взять под контроль."}],"$L8"]}],"$L9","$La"]}]}],["$Lb"],"$Lc"]}],{},null,false,null]},null,false,"$@d"]},null,false,null],"$Le",false]],"m":"$undefined","G":["$f",["$L10"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"iMusjAf-WJCLAV0VYL414"}
+12:I[97367,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+13:"$Sreact.suspense"
+16:I[97367,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"ViewportBoundary"]
+18:I[97367,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"MetadataBoundary"]
+8:["$","div",null,{"className":"mt-8 h-px w-20 bg-[#B9AD9C]"}]
+9:["$","div",null,{"className":"mt-12","children":["$","div",null,{"className":"max-w-2xl mx-auto space-y-6 text-[#55514B] leading-relaxed","children":[["$","h2",null,{"className":"text-2xl text-[#2E2B27] font-serif","children":"Что такое паническая атака на самом деле"}],["$","p",null,{"children":"Паническая атака — это внезапный приступ сильной тревоги, который сопровождается физическими симптомами: учащённое сердцебиение, нехватка воздуха, потливость, дрожь, головокружение."}],["$","p",null,{"children":"Важно понимать: паническая атака не опасна для жизни. Это реакция нервной системы, которая «перегружается» и включает ложную тревогу. Но в момент атаки кажется, что происходит что-то ужасное."}],["$","div",null,{"className":"bg-[#F5F0EB] rounded-2xl p-6 md:p-8 border-l-4 border-[#C49A7C] my-6","children":[["$","p",null,{"className":"text-xl md:text-2xl text-[#2C2C2C] font-medium leading-relaxed","children":"«Я не могу дышать, мне кажется, я сейчас умру»."}],["$","p",null,{"className":"text-sm text-[#8A7A6A] mt-3 text-right","children":"— из сессии"}]]}],["$","h2",null,{"className":"text-2xl text-[#2E2B27] font-serif","children":"Почему возникают панические атаки"}],["$","p",null,{"children":"Причины могут быть разными: сильный стресс, подавленные эмоции, хроническая усталость, тревожное расстройство. Иногда атаки случаются «на пустом месте» — без видимой причины."}],["$","p",null,{"children":"Часто панические атаки возникают у людей, которые привыкли подавлять свои чувства и не давать себе права на слабость. Это способ психики сказать: «Стоп, я больше не могу»."}],["$","h2",null,{"className":"text-2xl text-[#2E2B27] font-serif","children":"Что делать во время панической атаки"}],["$","p",null,{"children":"Если вы или кто-то рядом переживает паническую атаку, вот что можно сделать:"}],["$","ul",null,{"className":"list-disc pl-6 space-y-2","children":[["$","li",null,{"children":[["$","strong",null,{"children":"Сосредоточьтесь на дыхании."}]," Медленный вдох через нос — задержка на 3 счёта — медленный выдох через рот."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Заземлитесь."}]," Посмотрите вокруг: назовите 5 предметов, которые видите, 4, которые можете потрогать, 3, которые слышите."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Не убегайте."}]," Помните: это пройдёт через 10–15 минут."]}],["$","li",null,{"children":[["$","strong",null,{"children":"Умойтесь холодной водой"}]," — это помогает «переключить» нервную систему."]}]]}],["$","div",null,{"className":"bg-[#F5F0EB] rounded-2xl p-6 md:p-8 border-l-4 border-[#C49A7C] my-6","children":[["$","p",null,{"className":"text-xl md:text-2xl text-[#2C2C2C] font-medium leading-relaxed","children":"«Я научился дышать. Это звучит просто, но это изменило всё»."}],["$","p",null,{"className":"text-sm text-[#8A7A6A] mt-3 text-right","children":"— из сессии"}]]}],["$","h2",null,{"className":"text-2xl text-[#2E2B27] font-serif","children":"Когда нужен психолог"}],["$","p",null,{"children":"Если панические атаки повторяются, если вы начинаете избегать мест и ситуаций, где они могут случиться, — это повод обратиться к специалисту."}],["$","p",null,{"children":"Психолог поможет вам:"}],["$","ul",null,{"className":"list-disc pl-6 space-y-2","children":[["$","li",null,{"children":"понять причины ваших состояний;"}],["$","li",null,{"children":"научиться справляться с тревогой;"}],["$","li",null,{"children":"восстановить чувство контроля над своей жизнью;"}],["$","li",null,{"children":"перестать жить в страхе перед следующей атакой."}]]}],["$","h2",null,{"className":"text-2xl text-[#2E2B27] font-serif","children":"Как я могу помочь"}],["$","p",null,{"children":"Я работаю с тревожными состояниями и паническими атаками в рамках гештальт-подхода. Мы не просто «убираем симптомы», а исследуем, что стоит за вашей тревогой, какие части вашей жизни просят внимания."}],"$L11"]}]}]
+a:["$","section",null,{"className":"mt-16 border-t border-[#D8CEC1] pt-12","children":["$","div",null,{"className":"rounded-[32px] bg-[#53614D] px-7 py-10 text-white md:px-10","children":[["$","h2",null,{"className":"max-w-2xl text-3xl leading-tight md:text-4xl","children":"Вы не должны справляться с этим в одиночку"}],["$","p",null,{"className":"mt-5 max-w-2xl text-base leading-8 text-white/80 md:text-lg","children":"Если панические атаки мешают вам жить, я готова помочь вам понять их причины и научиться справляться."}],["$","$L7",null,{"href":"/#contact","className":"mt-8 inline-flex rounded-full bg-[#F7F3ED] px-7 py-3.5 text-base font-medium text-[#53614D] transition-opacity hover:opacity-90","children":"Записаться на консультацию"}]]}]}]
+b:["$","script","script-0",{"src":"/_next/static/chunks/1rxncug86bump.js","async":true,"nonce":"$undefined"}]
+c:["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]
+15:[]
+d:"$W15"
+e:["$","$1","h",{"children":[null,["$","$L16",null,{"children":"$L17"}],["$","div",null,{"hidden":true,"children":["$","$L18",null,{"children":["$","$13",null,{"name":"Next.Metadata","children":"$L19"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/26kxscvrt6mav.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+11:["$","p",null,{"children":"Вместе мы находим способы, которые работают именно для вас. Терапия не обещает, что атаки исчезнут мгновенно, но она даёт вам инструменты и опору, чтобы справляться с ними и постепенно уменьшить их влияние на вашу жизнь."}]
+17:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[27201,["/_next/static/chunks/1el5-48au3iai.js","/_next/static/chunks/14mrh2-p_w84d.js"],"IconMark"]
+14:null
+19:[["$","title","0",{"children":"Мария Куприна — психолог"}],["$","meta","1",{"name":"description","content":"Парный и семейный психотерапевт и гештальт-терапевт. Индивидуальная терапия, работа с парами и семьями. Онлайн-консультации, очные встречи в Калининграде и Москве."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1a","3",{}]]

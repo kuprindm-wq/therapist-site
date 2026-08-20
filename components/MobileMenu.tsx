@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // ← добавьте импорт Link
 import MobileBookingModal from "./booking/MobileBookingModal";
 
 export default function MobileMenu() {
@@ -34,6 +35,31 @@ export default function MobileMenu() {
             >
               Направления
             </a>
+
+            {/* НОВЫЕ СТРАНИЦЫ */}
+            <Link
+              href="/psychologist-for-relationships"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Психолог по отношениям
+            </Link>
+
+            <Link
+              href="/couple-therapy"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Психолог для пары
+            </Link>
+
+            <Link
+              href="/panic-attacks"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Панические атаки
+            </Link>
 
             <a
               href="#articles"
