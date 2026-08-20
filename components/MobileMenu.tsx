@@ -7,6 +7,11 @@ import MobileBookingModal from "./booking/MobileBookingModal";
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
+  const handleNavigate = (path: string) => {
+    setOpen(false);
+    window.location.href = path;
+  };
+
   return (
     <>
       <button
@@ -20,7 +25,7 @@ export default function MobileMenu() {
       {open && (
         <div className="fixed left-0 right-0 top-[88px] z-40 bg-[#FDFBF7] px-6 py-8 shadow-lg">
           <nav className="mx-auto flex max-w-7xl flex-col gap-5 text-base text-[#59544D]">
-            {/* Обо мне — используем Link (работает) */}
+            {/* Обо мне — обычный Link, работает */}
             <Link
               href="/#about"
               onClick={() => setOpen(false)}
@@ -29,14 +34,13 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            {/* НАПРАВЛЕНИЯ — используем обычный <a>, чтобы гарантировать переход */}
-            <a
-              href="/#requests"
-              className="transition hover:text-[#53614D]"
-              onClick={() => setOpen(false)}
+            {/* НАПРАВЛЕНИЯ — теперь кнопка с JS-переходом */}
+            <button
+              onClick={() => handleNavigate('/#requests')}
+              className="text-left transition hover:text-[#53614D]"
             >
               Направления
-            </a>
+            </button>
 
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
