@@ -11,29 +11,35 @@ export default function PsychologistForRelationshipsPage() {
           </Link>
         </div>
 
+        {/* ДВЕ КОЛОНКИ: ТЕКСТ + КАРТИНКА */}
         <header className="max-w-3xl">
-          <h1 className="text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl">
-            Психолог по отношениям: помощь парам и семьям
-          </h1>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:gap-12 items-center">
+            {/* Текст */}
+            <div>
+              <h1 className="text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl">
+                Психолог по отношениям: помощь парам и семьям
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
+                Отношения — это сложно. Иногда мы перестаём слышать друг друга,
+                теряем близость и не знаем, как вернуть то, что было.
+                Я помогаю парам и семьям разобраться в конфликтах, восстановить
+                доверие и найти новые способы быть вместе.
+              </p>
+            </div>
 
-          <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md">
-              <Image
-                src="/images/relationships-banner.jpg"
-                alt="Психолог по отношениям"
-                width={1200}
-                height={630}
-                className="w-full h-auto"
-              />
+            {/* Картинка */}
+            <div className="flex justify-center md:justify-end">
+              <div className="w-full max-w-xs rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/images/relationships-banner.jpg"
+                  alt="Психолог по отношениям"
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
-
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
-            Отношения — это сложно. Иногда мы перестаём слышать друг друга,
-            теряем близость и не знаем, как вернуть то, что было.
-            Я помогаю парам и семьям разобраться в конфликтах, восстановить
-            доверие и найти новые способы быть вместе.
-          </p>
 
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>

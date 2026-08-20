@@ -15,26 +15,29 @@ export default function ParentChildRelationshipsPage() {
         </div>
 
         <header className="max-w-3xl">
-          <h1 className="text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl">
-            Детско-родительские отношения: как понять и принять друг друга
-          </h1>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:gap-12 items-center">
+            <div>
+              <h1 className="text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl">
+                Детско-родительские отношения: как понять и принять друг друга
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
+                Я помогаю родителям и детям восстановить контакт, научиться слышать
+                друг друга и находить общий язык в любом возрасте.
+              </p>
+            </div>
 
-          <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-md">
-              <Image
-                src="/images/parent-child-relationships-banner.jpg"
-                alt="Детско-родительские отношения"
-                width={1200}
-                height={630}
-                className="w-full h-auto"
-              />
+            <div className="flex justify-center md:justify-end">
+              <div className="w-full max-w-xs rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src="/images/parent-child-relationships-banner.jpg"
+                  alt="Детско-родительские отношения"
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
-
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
-            Я помогаю родителям и детям восстановить контакт, научиться слышать
-            друг друга и находить общий язык в любом возрасте.
-          </p>
 
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>
