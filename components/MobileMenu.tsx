@@ -20,13 +20,21 @@ export default function MobileMenu() {
       {open && (
         <div className="fixed left-0 right-0 top-[88px] z-40 bg-[#FDFBF7] px-6 py-8 shadow-lg">
           <nav className="mx-auto flex max-w-7xl flex-col gap-5 text-base text-[#59544D]">
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               onClick={() => setOpen(false)}
               className="transition hover:text-[#53614D]"
             >
               Обо мне
-            </a>
+            </Link>
+
+            <Link
+              href="/#requests"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Направления
+            </Link>
 
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
@@ -66,21 +74,21 @@ export default function MobileMenu() {
               </Link>
             </div>
 
-            <a
-              href="#articles"
+            <Link
+              href="/#articles"
               onClick={() => setOpen(false)}
               className="transition hover:text-[#53614D]"
             >
               Статьи
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="transition hover:text-[#53614D]"
             >
               Контакты
-            </a>
+            </Link>
 
             <div className="pt-4">
               <MobileBookingModal />

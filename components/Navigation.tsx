@@ -8,11 +8,10 @@ export default function Navigation() {
 
   return (
     <nav className="flex items-center gap-8 text-sm font-medium text-[#7B705F]">
-      <a href="#about" className="transition-colors hover:text-[#53614D]">
+      <Link href="/#about" className="transition-colors hover:text-[#53614D]">
         Обо мне
-      </a>
+      </Link>
 
-      {/* ВЫПАДАЮЩЕЕ МЕНЮ "УСЛУГИ" */}
       <div
         className="relative"
         onMouseEnter={() => setIsOpen(true)}
@@ -60,13 +59,13 @@ export default function Navigation() {
         )}
       </div>
 
-      <a href="#articles" className="transition-colors hover:text-[#53614D]">
+      <Link href="/#articles" className="transition-colors hover:text-[#53614D]">
         Статьи
-      </a>
+      </Link>
 
-      <a href="#contact" className="transition-colors hover:text-[#53614D]">
+      <Link href="/#contact" className="transition-colors hover:text-[#53614D]">
         Контакты
-      </a>
+      </Link>
     </nav>
   );
 }
