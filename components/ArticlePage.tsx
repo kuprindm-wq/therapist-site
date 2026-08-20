@@ -265,10 +265,31 @@ function TableOfContents() {
   useEffect(() => {
     // Ищем все заголовки h2 в статье
     const elements = document.querySelectorAll("article h2");
-    const items = Array.from(elements).map((el) => ({
-      id: el.id || el.textContent?.toLowerCase().replace(/\s/g, "-") || "",
-      text: el.textContent || "",
-    }));
+    const items = Array.from(elements)
+      .map((el) => {
+        const text = el.textContent || "";
+        // Генерируем id из текста
+        const id = text.toLowerCase().replace(/\s/g, "-");
+        el.id = id; // Добавляем id для якорных ссылок
+        return { id, text };
+      })
+      // === ФИЛЬТР: Исключаем ненужные заголовки ===
+      .filter((item) => {
+        const lowerText = item.text.toLowerCase();
+        // Список фраз, которые не должны попадать в оглавление
+        const excludePhrases = [
+          "возможно, вам будет интересно",
+          "если вы узнали",
+          "обсудить свою ситуацию",
+          "другие материалы",
+          "читайте также",
+          "записаться",
+          "контакты",
+        ];
+        // Проверяем, содержит ли заголовок запрещенную фразу
+        return !excludePhrases.some((phrase) => lowerText.includes(phrase));
+      });
+
     setHeadings(items);
   }, []);
 
