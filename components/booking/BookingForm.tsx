@@ -15,63 +15,111 @@ export default function BookingForm() {
     message: "",
   });
 
-  async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>
-  ) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    if (loading) {
+      return;
+    }
+
+    if (!formData.contact.trim()) {
+      setError("Пожалуйста, укажите контакт для связи.");
+      return;
+    }
 
     setLoading(true);
     setError("");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: `${formData.contactType}: ${formData.contact}`,
-          format:
-            formData.format === "online"
-              ? "Онлайн"
-              : "Очно",
-          message: formData.message,
-        }),
-      });
+    const controller = new AbortController();
 
-      if (!response.ok) {
-        throw new Error();
+    const timeout = window.setTimeout(() => {
+      controller.abort();
+    }, 15000);
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key:
+              "e9541cda-95b4-4806-af3a-e90f54878e21",
+
+            subject:
+              "Новая заявка с сайта Марии Куприной",
+
+            from_name:
+              "Сайт Марии Куприной",
+
+            name:
+              formData.name || "Не указано",
+
+            contact_type:
+              getContactTypeLabel(
+                formData.contactType
+              ),
+
+            contact:
+              formData.contact,
+
+            format:
+              formData.format === "online"
+                ? "Онлайн"
+                : "Очно",
+
+            message:
+              formData.message || "Не указано",
+          }),
+          signal: controller.signal,
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Не удалось отправить форму");
       }
 
       setSubmitted(true);
-    } catch {
+    } catch (err) {
+      console.error(
+        "Ошибка отправки формы:",
+        err
+      );
+
       setError(
-        "Не удалось отправить заявку. Попробуйте ещё раз."
+        "Не удалось отправить заявку. Попробуйте ещё раз или свяжитесь со мной напрямую."
       );
     } finally {
+      window.clearTimeout(timeout);
       setLoading(false);
     }
   }
 
+  function getContactTypeLabel(value: string) {
+    const labels: Record<string, string> = {
+      phone: "Телефон",
+      telegram: "Telegram",
+      whatsapp: "WhatsApp",
+      max: "MAX",
+      email: "Email",
+    };
+
+    return labels[value] || value;
+  }
+
   if (submitted) {
     return (
-      <div className="flex min-h-[520px] flex-col items-center justify-center text-center">
-        <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#EEF4EB]">
-          <svg
-            className="h-10 w-10 text-[#53614D]"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        </div>
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
+          Готово
+        </p>
 
-        <h2 className="text-4xl text-[#2E2B27]">
+        <h2 className="mt-4 text-3xl leading-tight text-[#2E2B27] md:text-4xl">
           Спасибо!
         </h2>
 
@@ -86,12 +134,29 @@ export default function BookingForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-8"
+    >
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
+          Запись на консультацию
+        </p>
+
+        <h2 className="mt-4 text-3xl leading-tight text-[#2E2B27] md:text-4xl">
+          Давайте познакомимся
+        </h2>
+
+        <p className="mt-5 max-w-xl leading-8 text-[#5E564E]">
+          Заполните форму ниже, чтобы рассказать немного о себе
+          и выбрать удобный способ связи.
+        </p>
+      </div>
+
       <div>
         <label className="mb-3 block text-sm text-[#746D64]">
-          Ваше имя
+          Ваше имя{" "}
           <span className="text-[#A69D92]">
-            {" "}
             (необязательно)
           </span>
         </label>
@@ -125,11 +190,11 @@ export default function BookingForm() {
           ].map(([value, label]) => (
             <label
               key={value}
-              className={`${
+              className={`cursor-pointer rounded-xl border border-[#E5DDD3] px-4 py-3 transition hover:border-[#53614D] ${
                 value === "email"
                   ? "col-span-2"
                   : ""
-              } cursor-pointer rounded-xl border border-[#E5DDD3] px-4 py-3 transition hover:border-[#53614D]`}
+              }`}
             >
               <div className="flex items-center gap-3">
                 <input
@@ -160,6 +225,7 @@ export default function BookingForm() {
 
         <input
           type="text"
+          required
           value={formData.contact}
           onChange={(e) =>
             setFormData({
@@ -210,9 +276,8 @@ export default function BookingForm() {
 
       <div>
         <label className="mb-3 block text-sm text-[#746D64]">
-          О чём вы хотели бы поговорить?
+          О чём вы хотели бы поговорить?{" "}
           <span className="text-[#A69D92]">
-            {" "}
             (необязательно)
           </span>
         </label>
@@ -243,7 +308,9 @@ export default function BookingForm() {
           disabled={loading}
           className="w-full rounded-full bg-[#53614D] py-4 text-base font-medium text-white transition-all duration-300 hover:bg-[#465341] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {loading ? "Отправка..." : "Записаться"}
+          {loading
+            ? "Отправка..."
+            : "Записаться"}
         </button>
 
         <p className="text-center text-sm leading-7 text-[#8A8177]">

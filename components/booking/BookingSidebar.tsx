@@ -6,12 +6,12 @@ export default function BookingSidebar({
   onBack,
 }: BookingSidebarProps) {
   return (
-    <aside className="w-full shrink-0 border-b border-[#E8DFD4] bg-[#F6F2EC] lg:w-[320px] lg:border-b-0 lg:border-r">
-      <div className="flex h-full flex-col p-8">
+    <aside className="shrink-0 bg-[#F1ECE3] lg:w-[300px]">
+      <div className="flex h-full flex-col p-6 sm:p-8 md:p-10">
         <button
           type="button"
           onClick={onBack}
-          className="mb-10 w-fit text-sm tracking-wide text-[#6E7668] transition hover:text-[#53614D]"
+          className="mb-8 self-start text-sm text-[#6B7560] transition-colors hover:text-[#2E2B27]"
         >
           ← Назад
         </button>
@@ -20,7 +20,7 @@ export default function BookingSidebar({
           ПЕРВАЯ ВСТРЕЧА
         </p>
 
-        <h2 className="text-[34px] leading-[1.15] text-[#2E2B27]">
+        <h2 className="text-[30px] leading-[1.15] text-[#2E2B27] sm:text-[34px]">
           Запись
           <br />
           на консультацию
@@ -43,8 +43,8 @@ export default function BookingSidebar({
           </p>
         </div>
 
-        <div className="mt-auto pt-10">
-          <div className="rounded-2xl border border-[#E4DBCF] bg-white p-6">
+        <div className="mt-8 pt-2 lg:mt-auto lg:pt-10">
+          <div className="rounded-2xl border border-[#E4DBCF] bg-white p-5 sm:p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-[#7C8470]">
               Обычно отвечаю
             </p>

@@ -2,29 +2,25 @@ import BookingModal from "./booking/BookingModal";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="bg-[#FBF8F2]"
-    >
-      <div className="mx-auto max-w-7xl px-6 py-32 lg:px-12">
+    <section id="contact">
+      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-28">
         <div className="max-w-4xl">
-          <p className="mb-8 text-sm uppercase tracking-[0.3em] text-[#6B7560]">
+          <p className="mb-7 text-sm uppercase tracking-[0.25em] text-[#6B7560]">
             Контакты
           </p>
 
-          <h2 className="mb-10 text-4xl leading-tight text-[#2E2B27] md:text-6xl">
+          <h2 className="mb-8 text-4xl leading-tight text-[#2E2B27] md:text-6xl">
             Начать можно
             <br />
             с первого сообщения
           </h2>
 
-          <p className="mb-14 max-w-3xl text-lg leading-8 text-[#59544D] md:text-xl md:leading-9">
-            Если вы хотите обсудить свою ситуацию,
-            задать вопросы или подобрать удобный
-            формат встречи — напишите мне.
+          <p className="mb-10 max-w-3xl text-lg leading-8 text-[#59544D] md:text-xl md:leading-9">
+            Если вы хотите обсудить свою ситуацию или задать вопросы,
+            можно начать с короткого сообщения.
           </p>
 
-          <div className="mb-12">
+          <div className="mb-14">
             <BookingModal />
           </div>
 
@@ -38,7 +34,7 @@ export default function Contact() {
                 href="tel:+79057897905"
                 className="text-xl text-[#2E2B27] transition hover:text-[#53614D]"
               >
-                +7&nbsp;905&nbsp;789-79-05
+                +7 905 789-79-05
               </a>
             </div>
 
@@ -54,16 +50,6 @@ export default function Contact() {
                 psi-art@mail.ru
               </a>
             </div>
-          </div>
-
-          <div className="mt-14 border-t border-[#D5CCBE] pt-8">
-            <p className="text-lg leading-8 text-[#59544D]">
-              Формат встреч:
-              <br />
-              Онлайн — основной формат работы.
-              <br />
-              Очные встречи — Калининград и Москва.
-            </p>
           </div>
         </div>
       </div>

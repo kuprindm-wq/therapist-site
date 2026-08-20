@@ -1,32 +1,23 @@
-"use client";
-
-const links = [
-  {
-    name: "Обо мне",
-    href: "#about",
-  },
-  {
-    name: "Направления",
-    href: "#work",
-  },
-  {
-    name: "Контакты",
-    href: "#contact",
-  },
-];
+import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="hidden items-center gap-8 md:flex">
-      {links.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          className="text-sm font-medium text-[#59544D] transition-colors duration-200 hover:text-[#53614D]"
-        >
-          {link.name}
-        </a>
-      ))}
+    <nav className="flex items-center gap-8 text-sm font-medium text-[#7B705F]">
+      <a href="#about" className="transition-colors hover:text-[#53614D]">
+        Обо мне
+      </a>
+
+      <a href="#requests" className="transition-colors hover:text-[#53614D]">
+        Направления
+      </a>
+
+      <a href="#articles" className="transition-colors hover:text-[#53614D]">
+        Статьи
+      </a>
+
+      <a href="#contact" className="transition-colors hover:text-[#53614D]">
+        Контакты
+      </a>
     </nav>
   );
 }

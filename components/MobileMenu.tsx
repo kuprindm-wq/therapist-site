@@ -1,52 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import BookingModal from "./booking/BookingModal";
-
+import MobileBookingModal from "./booking/MobileBookingModal";
 
 export default function MobileMenu() {
-
-
   const [open, setOpen] = useState(false);
 
-
-
-
-
   return (
-    <div className="md:hidden">
-
-
-
-
-
+    <>
       <button
+        type="button"
         onClick={() => setOpen(!open)}
         className="rounded-full border border-[#D5CCBE] px-5 py-2 text-sm text-[#59544D]"
       >
         {open ? "Закрыть" : "Меню"}
       </button>
 
-
-
-
-
-
-
       {open && (
-
-        <div className="absolute left-0 right-0 top-full z-40 bg-[#FDFBF7] px-6 py-8 shadow-lg">
-
-
-
-
-
-          <nav className="flex flex-col gap-5 text-base text-[#59544D]">
-
-
-
-
-
+        <div className="fixed left-0 right-0 top-[88px] z-40 bg-[#FDFBF7] px-6 py-8 shadow-lg">
+          <nav className="mx-auto flex max-w-7xl flex-col gap-5 text-base text-[#59544D]">
             <a
               href="#about"
               onClick={() => setOpen(false)}
@@ -54,12 +26,6 @@ export default function MobileMenu() {
             >
               Обо мне
             </a>
-
-
-
-
-
-
 
             <a
               href="#work"
@@ -69,11 +35,13 @@ export default function MobileMenu() {
               Направления
             </a>
 
-
-
-
-
-
+            <a
+              href="#articles"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Статьи
+            </a>
 
             <a
               href="#contact"
@@ -83,39 +51,12 @@ export default function MobileMenu() {
               Контакты
             </a>
 
-
-
-
-
-
-
             <div className="pt-4">
-
-              <BookingModal />
-
+              <MobileBookingModal />
             </div>
-
-
-
-
-
-
           </nav>
-
-
-
-
-
-
         </div>
-
       )}
-
-
-
-
-
-
-    </div>
+    </>
   );
 }

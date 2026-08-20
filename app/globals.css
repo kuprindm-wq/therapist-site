@@ -1,32 +1,25 @@
 @import "tailwindcss";
 
-
 :root {
-  --background: #F7F3EB;
-  --foreground: #292722;
+  --background: #FAF7F1;
+  --foreground: #2E2B27;
 
   --sage: #53614D;
-  --sage-light: #DCE0D4;
+  --sage-light: #E2E6DC;
 
-  --sand: #E7DED0;
-  --line: #D4CABA;
+  --sand: #E8DED0;
+  --line: #D8D0C4;
 }
-
-
 
 html {
   scroll-behavior: smooth;
 }
-
-
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
 }
-
-
 
 h1,
 h2,
@@ -36,13 +29,9 @@ h3 {
   letter-spacing: -0.025em;
 }
 
-
-
 p {
   letter-spacing: 0.01em;
 }
-
-
 
 ::selection {
   background: var(--sage-light);
