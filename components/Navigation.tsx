@@ -11,7 +11,6 @@ export default function Navigation() {
         Направления
       </a>
 
-      {/* НОВЫЕ СТРАНИЦЫ */}
       <Link href="/psychologist-for-relationships" className="transition-colors hover:text-[#53614D]">
         Психолог по отношениям
       </Link>
@@ -22,6 +21,10 @@ export default function Navigation() {
 
       <Link href="/panic-attacks" className="transition-colors hover:text-[#53614D]">
         Панические атаки
+      </Link>
+
+      <Link href="/parent-child-relationships" className="transition-colors hover:text-[#53614D]">
+        Детско-родительские
       </Link>
 
       <a href="#articles" className="transition-colors hover:text-[#53614D]">

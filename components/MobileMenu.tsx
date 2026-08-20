@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link"; // ← добавьте импорт Link
+import Link from "next/link";
 import MobileBookingModal from "./booking/MobileBookingModal";
 
 export default function MobileMenu() {
@@ -36,7 +36,6 @@ export default function MobileMenu() {
               Направления
             </a>
 
-            {/* НОВЫЕ СТРАНИЦЫ */}
             <Link
               href="/psychologist-for-relationships"
               onClick={() => setOpen(false)}
@@ -59,6 +58,14 @@ export default function MobileMenu() {
               className="transition hover:text-[#53614D]"
             >
               Панические атаки
+            </Link>
+
+            <Link
+              href="/parent-child-relationships"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Детско-родительские
             </Link>
 
             <a
