@@ -28,15 +28,15 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            <Link
-              href="/#articles"
+            {/* НАПРАВЛЕНИЯ — обычный тег <a> для гарантированной работы */}
+            <a
+              href="/#requests"
               onClick={() => setOpen(false)}
               className="transition hover:text-[#53614D]"
             >
-              Статьи
-            </Link>
+              Направления
+            </a>
 
-            {/* Блок Услуги */}
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
                 Услуги
@@ -74,6 +74,14 @@ export default function MobileMenu() {
                 Детско-родительские
               </Link>
             </div>
+
+            <Link
+              href="/#articles"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-[#53614D]"
+            >
+              Статьи
+            </Link>
 
             <Link
               href="/#contact"
