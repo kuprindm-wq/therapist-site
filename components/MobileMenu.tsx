@@ -7,6 +7,11 @@ import MobileBookingModal from "./booking/MobileBookingModal";
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
+  const handleNavigateToRequests = () => {
+    setOpen(false);
+    window.location.href = '/#requests';
+  };
+
   return (
     <>
       <button
@@ -28,14 +33,13 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            {/* НАПРАВЛЕНИЯ — обычный тег <a> для гарантированной работы */}
-            <a
-              href="/#requests"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
+            {/* НАПРАВЛЕНИЯ — теперь кнопка с JS-переходом */}
+            <button
+              onClick={handleNavigateToRequests}
+              className="text-left transition hover:text-[#53614D]"
             >
               Направления
-            </a>
+            </button>
 
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
