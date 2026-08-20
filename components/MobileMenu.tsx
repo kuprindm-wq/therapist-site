@@ -28,14 +28,13 @@ export default function MobileMenu() {
               Обо мне
             </Link>
 
-            {/* Обычная ссылка — теперь работает */}
-            <a
+            <Link
               href="/#requests"
               onClick={() => setOpen(false)}
               className="transition hover:text-[#53614D]"
             >
               Направления
-            </a>
+            </Link>
 
             <div className="border-t border-[#E6DFD4] pt-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
