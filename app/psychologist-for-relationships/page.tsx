@@ -15,23 +15,26 @@ export default function PsychologistForRelationshipsPage() {
           <h1 className="text-4xl leading-[1.08] text-[#2E2B27] sm:text-5xl md:text-6xl">
             Психолог по отношениям: помощь парам и семьям
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
+
+          {/* КОМПАКТНАЯ КАРТИНКА — центрированная, с ограничением ширины */}
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src="/images/relationships-banner.jpg"
+                alt="Психолог по отношениям"
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
             Отношения — это сложно. Иногда мы перестаём слышать друг друга,
             теряем близость и не знаем, как вернуть то, что было.
             Я помогаю парам и семьям разобраться в конфликтах, восстановить
             доверие и найти новые способы быть вместе.
           </p>
-
-          {/* КАРТИНКА — без обрезки */}
-          <div className="mt-8 rounded-2xl overflow-hidden">
-            <Image
-              src="/images/relationships-banner.jpg"
-              alt="Психолог по отношениям"
-              width={1200}
-              height={630}
-              className="w-full h-auto"
-            />
-          </div>
 
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>

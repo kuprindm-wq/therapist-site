@@ -19,28 +19,29 @@ export default function ParentChildRelationshipsPage() {
             Детско-родительские отношения: как понять и принять друг друга
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
+          {/* КОМПАКТНАЯ КАРТИНКА */}
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src="/images/parent-child-relationships-banner.jpg"
+                alt="Детско-родительские отношения"
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#716B63] md:text-xl md:leading-9">
             Я помогаю родителям и детям восстановить контакт, научиться слышать
             друг друга и находить общий язык в любом возрасте.
           </p>
-
-          {/* КАРТИНКА */}
-          <div className="mt-8 rounded-2xl overflow-hidden">
-            <Image
-              src="/images/parent-child-relationships-banner.jpg"
-              alt="Детско-родительские отношения"
-              width={1200}
-              height={630}
-              className="w-full h-auto"
-            />
-          </div>
 
           <div className="mt-8 h-px w-20 bg-[#B9AD9C]" />
         </header>
 
         <div className="mt-12">
           <div className="max-w-2xl mx-auto space-y-6 text-[#55514B] leading-relaxed">
-
             <h2 className="text-2xl text-[#2E2B27] font-serif">
               Когда нужна помощь в детско-родительских отношениях
             </h2>
@@ -106,7 +107,6 @@ export default function ParentChildRelationshipsPage() {
             <p>
               Я не даю готовых рецептов. Вместе мы ищем то, что подходит именно вашей семье.
             </p>
-
           </div>
         </div>
 
