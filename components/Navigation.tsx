@@ -55,6 +55,12 @@ export default function Navigation() {
             >
               Детско-родительские отношения
             </Link>
+            <Link
+              href="/therapy-methods"
+              className="block px-4 py-2 text-sm hover:bg-[#F5F0EB] transition-colors"
+            >
+              Методы терапии
+            </Link>
           </div>
         )}
       </div>
