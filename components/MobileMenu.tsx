@@ -28,45 +28,43 @@ export default function MobileMenu() {
               Обо мне
             </a>
 
-            <a
-              href="#work"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Направления
-            </a>
+            <div className="border-t border-[#E6DFD4] pt-3">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#8A8072]">
+                Услуги
+              </p>
 
-            <Link
-              href="/psychologist-for-relationships"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Психолог по отношениям
-            </Link>
+              <Link
+                href="/psychologist-for-relationships"
+                onClick={() => setOpen(false)}
+                className="mt-2 block transition hover:text-[#53614D]"
+              >
+                Психолог по отношениям
+              </Link>
 
-            <Link
-              href="/couple-therapy"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Психолог для пары
-            </Link>
+              <Link
+                href="/couple-therapy"
+                onClick={() => setOpen(false)}
+                className="mt-2 block transition hover:text-[#53614D]"
+              >
+                Психолог для пары
+              </Link>
 
-            <Link
-              href="/panic-attacks"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Панические атаки
-            </Link>
+              <Link
+                href="/panic-attacks"
+                onClick={() => setOpen(false)}
+                className="mt-2 block transition hover:text-[#53614D]"
+              >
+                Панические атаки
+              </Link>
 
-            <Link
-              href="/parent-child-relationships"
-              onClick={() => setOpen(false)}
-              className="transition hover:text-[#53614D]"
-            >
-              Детско-родительские
-            </Link>
+              <Link
+                href="/parent-child-relationships"
+                onClick={() => setOpen(false)}
+                className="mt-2 block transition hover:text-[#53614D]"
+              >
+                Детско-родительские
+              </Link>
+            </div>
 
             <a
               href="#articles"

@@ -23,14 +23,14 @@ export default function CoupleTherapyPage() {
             Вместе мы разбираемся в конфликтах, находим новые способы слышать друг друга и возвращаем тепло в отношения.
           </p>
 
-          {/* КАРТИНКА */}
-          <div className="mt-8 rounded-2xl overflow-hidden">
+          {/* КАРТИНКА — уменьшенная */}
+          <div className="mt-8 rounded-2xl overflow-hidden max-h-[320px]">
             <Image
               src="/images/couple-therapy-banner.jpg"
               alt="Психолог для пары"
               width={1200}
               height={630}
-              className="w-full h-auto"
+              className="w-full h-auto object-cover object-center"
             />
           </div>
 
@@ -76,7 +76,7 @@ export default function CoupleTherapyPage() {
 
             <p>
               Я работаю с парой как с единой системой. Мы не ищем «виноватого»,
-              а смотрим на то, что происходит между вами. Как вы строит диалог?
+              а смотрим на то, что происходит между вами. Как вы строите диалог?
               Что стоит за вашими словами? Что каждый из вас чувствует на самом деле?
             </p>
 

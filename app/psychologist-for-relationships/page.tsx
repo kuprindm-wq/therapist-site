@@ -22,14 +22,14 @@ export default function PsychologistForRelationshipsPage() {
             доверие и найти новые способы быть вместе.
           </p>
 
-          {/* КАРТИНКА */}
-          <div className="mt-8 rounded-2xl overflow-hidden">
+          {/* КАРТИНКА — уменьшенная */}
+          <div className="mt-8 rounded-2xl overflow-hidden max-h-[320px]">
             <Image
               src="/images/relationships-banner.jpg"
               alt="Психолог по отношениям"
               width={1200}
               height={630}
-              className="w-full h-auto"
+              className="w-full h-auto object-cover object-center"
             />
           </div>
 
